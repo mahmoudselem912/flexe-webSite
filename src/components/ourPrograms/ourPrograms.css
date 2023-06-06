@@ -1,0 +1,66 @@
+.ourPrograms-section{
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.ourPrograms-section__content{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.lapTop-icon{
+    width: 800px;
+    height: 800px;
+}
+
+.lapTop_content{
+    position: absolute;
+    top: 122px;
+    left: 98px;
+    width: 604px;
+    height: 380px;
+    top: 126px;
+    left: 130px;
+    width: 540px;
+    height: 343px;
+    animation: fromLeft 1s;
+}
+
+.ourPrograms-section__programs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 168px;
+
+}
+
+.program-container{
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.lapTop-container{
+    position: relative;
+}
+
+.ourPrograms-section__header{
+    color: rgb(32, 81, 145);
+    
+}
+
+
+
+@keyframes fromLeft {
+    0% {
+      opacity: 0;
+      transform: translatex(-20px);
+    }
+   
+  }

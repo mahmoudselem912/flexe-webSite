@@ -1,0 +1,16 @@
+.video-container{
+    height: 100%;
+    overflow: hidden;
+}
+.video{
+    width: 100%;
+    object-fit: fill;
+    height: 87vh;
+    z-index: 1;
+    overflow: hidden;
+    /* transition: all 1s; */
+}
+
+
+
+

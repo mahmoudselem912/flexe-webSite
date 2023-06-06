@@ -1,0 +1,110 @@
+.nav-bar{
+    height: 55px;
+    background-color: white;
+    box-shadow: 4px 4px 4px #bebdbd;
+    padding-right: 250px;
+    padding-left: 250px;
+    position: -webkit-sticky;
+	position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: all 0.2s;
+    padding-top: 30px;
+    /* animation: fromTop 1s; */
+}
+
+.nav-bar_grid{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nav-bar_components{
+    display: inline-flex;
+    gap: 50px;
+    animation: fromTop 2s;
+}
+
+.nav-bar_text{
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-bar_text:hover{
+    color: #e83e8c;
+}
+
+.logo-container{
+    text-align: center;
+    margin-top: -40px;
+    animation: fromLeft1 3s;
+    
+}
+
+.logo{
+    width: 160px;
+    height: 90px;
+    animation: fromLeft1 3s;
+}
+
+.appBar{
+    padding: 0 6vw;
+}
+
+
+@keyframes fromTop {
+    0%{
+        opacity: 0;
+        transform:  translateY(-200px) ;
+    } 100%{
+        opacity: 1;
+        transform:  translateY(10px) 
+    }
+}
+
+@keyframes fromLeft1 {
+    0%{
+        opacity: 0;
+        transform:  translatex(-500px) ;
+    } 100%{
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .logo{
+        width: 100px;
+        height: 100px;
+        animation: fromLeft1 3s;
+    }
+    .appBar{
+        padding: 0 6vw;
+    }
+  }
+  
+  @media only screen and (max-width: 56.25em) {
+    .logo{
+        width: 70px;
+        height: 70px;
+        animation: fromLeft1 3s;
+    }
+
+    .appBar{
+        padding: 0 6vw;
+    }
+    
+    
+  }
+  
+  @media only screen and (min-width: 112.5em) {
+    .logo{
+        width: 160px;
+        height: 90px;
+        animation: fromLeft1 3s;
+    }
+    .appBar{
+        padding: 0 6vw;
+    }
+  }

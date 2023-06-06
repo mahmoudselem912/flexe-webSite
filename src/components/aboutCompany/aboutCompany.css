@@ -1,0 +1,140 @@
+.about-company{
+    margin-top: 100px
+}
+
+.about-company__content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-company__logo-container{
+    /* margin-left: 200px; */
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-company__logo{
+    width: 60%;
+/*     
+    transform: scaleY(0.9); */
+    /* width: 1000px;
+    height: 1000px; */
+    /* clip-path: polygon(100% 0, 61% 100%, 0 41%, 0% 22%); */
+}
+
+.about-company__info-container{
+    /* padding-right: 100px; */
+    width: 50%;
+    text-align: right;
+}
+
+.about-company__info-container__text{
+    display: inline-flex;
+    gap: 10px;
+    text-align: center;
+    
+}
+
+.about-company__info-container__text__text{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.horizontal-line{
+    border-top: 2px solid rgb(32, 81, 145);
+    width: 30px;
+    margin-top: 17px;
+}
+
+.about-company__info-container__content{
+    direction: rtl;
+}
+
+.company_name{
+    color: rgb(32, 81, 145);
+    margin-right: 40px;
+}
+
+.company_information{
+    font-size: 2rem;
+    margin-right: 40px;
+    direction: rtl;
+    margin-bottom: 40px;
+    /* display: inline-block; */
+    text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-company__button{
+    background-color: rgb(32, 81, 145);
+    text-decoration: none;
+    /* width: 150px;
+    height: 150px; */
+    border-radius: 4px;
+    font-family: 'Cairo';
+    color: white;
+    padding: 5px;
+    margin-right: 40px;
+    font-size: 1.5rem;
+}
+
+/* @media only screen and (min-width: 112.5em) and (max-width: 75em) {
+    .about-company__info-container{
+        width: 100%;
+    }
+
+    .about-company__logo{
+        width: 100%;
+    }
+
+    .about-company__logo-container{
+        width: 100%;
+    }
+} */
+
+@media only screen and (max-width: 75em) {
+    .about-company__info-container{
+        width: 100%;
+    }
+
+    .about-company__logo{
+        width: 60%;
+    }
+
+    .about-company__logo-container{
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 56.25em) {
+    .about-company__info-container{
+        width: 100%;
+    }
+
+    .about-company__logo{
+        width: 60%;
+    }
+
+    .about-company__logo-container{
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 112.5em) {
+    .about-company__info-container{
+        width: 50%;
+    }
+
+    .about-company__logo{
+        width: 60%;
+    }
+
+    .about-company__logo-container{
+        width: 50%;
+    }
+  }

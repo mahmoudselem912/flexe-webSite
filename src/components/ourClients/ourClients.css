@@ -1,0 +1,43 @@
+.ourClients-section{
+    margin-top: 200px;
+    background-image: url(../../assets/blue.jpg);
+    background-size: cover;
+    clip-path: polygon(100% 37%, 100% 100%, 0 100%, 0% 0%);
+}
+
+.ourClient-container{
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.ourClient-logo{
+    width: 200px;
+    height: 200px;
+}
+
+.ourClient-name{
+    font-size: 20px;
+}
+
+.ourClients-section__header{
+    color: rgb(32, 81, 145);
+    text-align: center;
+}
+
+.ourClients-section__text{
+    text-align: center;
+    font-size: 20px;
+}
+
+.ourClients-section__text-container{
+    display: inline-flex;
+    gap: 10px;
+    text-align: center;
+    margin-top: 400px;
+    
+}
+
+.ourClients-section__info-container{
+    text-align: center;
+}
+
