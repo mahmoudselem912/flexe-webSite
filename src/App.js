@@ -1,29 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/navBar/navBar';
-import ImportantPoints from './components/importatPoints/importantPoints';
-import About from './components/about/about';
-import AboutCompany from './components/aboutCompany/aboutCompany';
-import WorkStages from './components/workStages/workStages';
-import OurPrograms from './components/ourPrograms/ourPrograms';
-import OurClients from './components/ourClients/ourClients';
-import Footer from './components/footer/footer';
-import Blog from './components/blog/blog';
-
+import React from "react";
+import "./App.css";
+import HomePage from "./pages/homePage/homePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Program from "./pages/program/program";
+import ScrollTop from "./utility/scrollTop";
+import Services from "./pages/services/services";
+import TestPage from "./pages/test/test";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <ImportantPoints />
-      <About />
-      <AboutCompany />
-      <WorkStages />
-      <OurPrograms />
-      <OurClients />
-      <Blog/>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollTop />
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        <Route path="/program" element={<Program />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/test" element={<TestPage />} />
+      </Routes>
+      <ToastContainer style={{ fontSize: "2rem" }} autoClose={2000} />
+    </BrowserRouter>
   );
 }
 

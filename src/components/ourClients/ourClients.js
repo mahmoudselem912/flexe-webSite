@@ -1,9 +1,14 @@
 import React from "react";
 import "./ourClients.css";
 import Carousel from "react-multi-carousel";
-import CPCLogo from "../../assets/CPCLogo.png";
-import NikeLogo from "../../assets/nikeLogo.png";
-import AdidasLogo from "../../assets/adidasLogo.png";
+import CPCLogo from "../../assets/cpc.png";
+import CiraLogo from "../../assets/cira.png";
+import FrankeLogo from "../../assets/franke.png";
+import MarbellaLogo from '../../assets/marbella.png'
+import EagleLogo from '../../assets/eagle.png'
+import AlaminLogo from '../../assets/alamin.png'
+
+const moment = require('moment')
 
 const OurClients = () => {
   const responsive = {
@@ -32,30 +37,42 @@ const OurClients = () => {
       company_name: "شركة التعاون للبترول",
     },
     {
-      logo: NikeLogo,
-      company_name: "Nike",
+      logo: CiraLogo,
+      company_name: "Cira Education",
     },
     {
-      logo: AdidasLogo,
-      company_name: "Adidas",
+      logo: FrankeLogo,
+      company_name: "Franke",
     },
+    {
+      logo: MarbellaLogo,
+      company_name: "Marbella"
+    },
+    {
+      logo: EagleLogo,
+      company_name: "Eagle"
+    },
+    {
+      logo: AlaminLogo,
+      company_name: "Alamin"
+    }
   ];
 
   return (
-    <div className="ourClients-section">
+    <div className="ourClients-section" id="clients">
       <div className="ourClients-section__info-container">
         <div className="ourClients-section__text-container">
           <div className="ourClients-section__text">
-            اكتر من 7000 عميل وثقوا فى خدماتنا وبرامجنا بكل ثقة على مدار 13سنة
+            اكتر من 200 عميل وثقوا فى خدماتنا وبرامجنا بكل ثقة على مدار {+moment(new Date()).format("YYYY") - 2020} سنين
           </div>
           <div className="horizontal-line"></div>
         </div>
       </div>
 
-      <h2 className="ourClients-section__header">عمـــلاؤنـــا</h2>
+      <h2 className="ourClients-section__header">كبــار عمــلاؤنا </h2>
       <Carousel responsive={responsive} autoPlay infinite autoPlaySpeed={2000}>
-        {clients.map((client) => (
-          <div className="ourClient-container">
+        {clients.map((client,i) => (
+          <div className="ourClient-container" key={i}>
             <img src={client.logo} alt="FFF" className="ourClient-logo" />{" "}
             <div>
               <div className="ourClient-name">{client.company_name}</div>

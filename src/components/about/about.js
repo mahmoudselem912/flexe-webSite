@@ -45,9 +45,9 @@ const About = () => {
       <div className="carousel-container">
         <Carousel
           responsive={responsive}
-          // autoPlay
+          autoPlay
           infinite
-          autoPlaySpeed={2000}
+          autoPlaySpeed={1800}
         >
           <div className="about-section__card__container">
             <div className="about-section_card ourOffers">

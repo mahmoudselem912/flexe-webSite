@@ -1,86 +1,103 @@
-.about-company{
-    margin-top: 100px
+.about-company {
+  margin-top: 100px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(207, 198, 205, 0.1),
+      rgba(207, 198, 205, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url(../../assets/BG11.jpg);
+  background-size: cover;
 }
 
-.about-company__content{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+.about-company__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.about-company__logo-container{
-    /* margin-left: 200px; */
-    width: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-company__logo-container {
+  /* margin-left: 200px; */
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-company__logo{
-    width: 60%;
-/*     
+.about-company__logo {
+  width: 100%;
+  /*     
     transform: scaleY(0.9); */
-    /* width: 1000px;
+  /* width: 1000px;
     height: 1000px; */
-    /* clip-path: polygon(100% 0, 61% 100%, 0 41%, 0% 22%); */
+  /* clip-path: polygon(100% 0, 61% 100%, 0 41%, 0% 22%); */
 }
 
-.about-company__info-container{
-    /* padding-right: 100px; */
-    width: 50%;
-    text-align: right;
+.about-company__info-container {
+  /* padding-right: 100px; */
+  width: 50%;
+  text-align: right;
+  padding-bottom: 22px;
 }
 
-.about-company__info-container__text{
-    display: inline-flex;
-    gap: 10px;
-    text-align: center;
-    
+.about-company__info-container__text {
+  display: inline-flex;
+  gap: 0.5vw;
+  align-items: center;
+  /* gap: 10px;
+  text-align: center; */
 }
 
-.about-company__info-container__text__text{
-    font-size: 2rem;
-    font-weight: 600;
+.about-company__info-container__text__text {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Hayah;
 }
 
-.horizontal-line{
-    border-top: 2px solid rgb(32, 81, 145);
-    width: 30px;
-    margin-top: 17px;
+.horizontal-line {
+  border-top: 2px solid rgb(32, 81, 145);
+  width: 30px;
 }
 
-.about-company__info-container__content{
-    direction: rtl;
+.about-company__info-container__content {
+  direction: rtl;
 }
 
-.company_name{
-    color: rgb(32, 81, 145);
-    margin-right: 40px;
+.company_name {
+  color: rgb(32, 81, 145);
+  margin-right: 3.3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Hayah;
 }
 
-.company_information{
-    font-size: 2rem;
-    margin-right: 40px;
-    direction: rtl;
-    margin-bottom: 40px;
-    /* display: inline-block; */
-    text-align: justify;
+.company_information {
+  font-size: 3rem;
+  margin-right: 3.3rem;
+  direction: rtl;
+  margin-bottom: 40px;
+
+  /* display: inline-block; */
+  text-align: justify;
   text-justify: inter-word;
+  font-family: Arabic;
+  font-weight: bold;
 }
 
-.about-company__button{
-    background-color: rgb(32, 81, 145);
-    text-decoration: none;
-    /* width: 150px;
+.about-company__button {
+  background-color: rgb(32, 81, 145);
+  text-decoration: none;
+  /* width: 150px;
     height: 150px; */
-    border-radius: 4px;
-    font-family: 'Cairo';
-    color: white;
-    padding: 5px;
-    margin-right: 40px;
-    font-size: 1.5rem;
+  border-radius: 4px;
+  font-family: "Cairo";
+  color: white;
+  padding: 5px;
+  margin-right: 40px;
+  font-size: 1.5rem;
 }
 
 /* @media only screen and (min-width: 112.5em) and (max-width: 75em) {
@@ -98,43 +115,43 @@
 } */
 
 @media only screen and (max-width: 75em) {
-    .about-company__info-container{
-        width: 100%;
-    }
-
-    .about-company__logo{
-        width: 60%;
-    }
-
-    .about-company__logo-container{
-        width: 100%;
-    }
+  .about-company__info-container {
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 56.25em) {
-    .about-company__info-container{
-        width: 100%;
-    }
 
-    .about-company__logo{
-        width: 60%;
-    }
-
-    .about-company__logo-container{
-        width: 100%;
-    }
+  .about-company__logo {
+    width: 60%;
   }
-  
-  @media only screen and (min-width: 112.5em) {
-    .about-company__info-container{
-        width: 50%;
-    }
 
-    .about-company__logo{
-        width: 60%;
-    }
-
-    .about-company__logo-container{
-        width: 50%;
-    }
+  .about-company__logo-container {
+    width: 100%;
   }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about-company__info-container {
+    width: 100%;
+  }
+
+  .about-company__logo {
+    width: 60%;
+  }
+
+  .about-company__logo-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  .about-company__info-container {
+    width: 50%;
+  }
+
+  .about-company__logo {
+    width: 60%;
+  }
+
+  .about-company__logo-container {
+    width: 50%;
+  }
+}

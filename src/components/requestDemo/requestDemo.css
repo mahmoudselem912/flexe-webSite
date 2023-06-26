@@ -1,49 +1,69 @@
-.requestDemo-section{
-    background-color: white;
-    direction: ltr;
-    border-radius: 5px;
-    /* padding-left: 10px;*/
-    padding-bottom: 20px; 
-    letter-spacing: 2px;
-    text-align: center;
+.requestDemo-section {
+  background: rgba(0, 0, 0, 0.1); 
+  /* border: 1px solid rgba(255, 255, 255, 0.14);  */
+  backdrop-filter: blur(7.3px);
+  box-shadow: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(7.3px); 
+  direction: ltr;
+  border-radius: 2rem;
+  padding: 50px;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
 }
 
-.inputs-container{
-    display: inline-flex;
-    gap: 25px;
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+}   
+
+.input {
+  width: 48%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #e7ebef;
+  color: white;
+  border-radius: 2px;
+  background-color: #0a2d43;
+
+  background: rgba(255,255,255,0.9);
+    color: #000;
 }
 
-.input{
-    width: 200px;
-    padding: 10px;
-    font-size: 15px;
-    border: 2px solid #e7ebef;
-    color: #51668a;
-    border-radius: 2px;
+.input:focus {
+  outline: 2px solid #0a2d43;
 }
 
-.input:focus{
-    outline: 2px solid #0a2d43;
+
+.input::placeholder{
+  color: white;
+  color: #000;
+
 }
 
-.requestDemo__button{
-    background-color: #359cd6;
-    color: #ffffff;
-    width: 474px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.2s;
+.requestDemo__button {
+  background-color: white;
+  color: #0a2d43;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s;
 }
 
-.requestDemo__button:hover{
-    transform: translateY(-10px);
-    background-color: #0a2d43;
+/* .requestDemo__button:hover {
+  transform: translateY(-10px);
+
+  background-color: #359cd6;
+} */
+
+.requestDemo_header {
+  color: white
 }
 
-.requestDemo_header{
-    color: #359cd6;
+.requestDemo_header:hover{
+    color: white
 }
-

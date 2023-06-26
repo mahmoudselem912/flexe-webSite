@@ -36,6 +36,7 @@ const Blog = () => {
               ما الفرق بين نظامى ال ERP و POS
             </div>
           </div>
+
         </div>
       </div>
     </div>

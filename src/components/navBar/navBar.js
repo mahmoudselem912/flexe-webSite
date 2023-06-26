@@ -1,33 +1,7 @@
-// import React from "react";
 import logo from "../../assets/newlogo.png";
 import "./navBar.css";
 
-// const NavBar = () => {
-//   return (
-//     <nav className="nav-bar">
-//       <div className="nav-bar_grid">
-//         <div className="logo-container">
-//           <img alt="fff" src={logo} className="logo" />
-//         </div>
-
-//         <div className="nav-bar_components">
-//           <div className="nav-bar_text">تواصل معنا</div>
-//           <div className="nav-bar_text">عن الشركة</div>
-//           <div className="nav-bar_text">العروض</div>
-//           <div className="nav-bar_text">عملاؤنا</div>
-//           <div className="nav-bar_text">البرامج</div>
-//           <div className="nav-bar_text">الخدمات</div>
-//           <div className="nav-bar_text">الرئيسية</div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default NavBar;
-
 import * as React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -43,21 +17,88 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { programmsContent } from "../../utility/programmsContent";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = [
-  "تواصل معنا",
-  "عن الشركة",
-  "العروض",
-  "عملاؤنا",
-  "البرامج",
-  "الخدمات",
-  "الرئيسية",
+  {
+    name: "تواصل معنا",
+    arrow: false,
+    route: "/",
+    href: "#footer"
+  },
+  {
+    name: "عن الشركة",
+    arrow: false,
+    route: "/",
+    href: "#aboutCompany"
+  },
+  {
+    name: "عملاؤنا",
+    arrow: false,
+    href: "#clients",
+    route: "/"
+  },
+  {
+    name: "العروض",
+    arrow: false,
+  },
+
+  {
+    name: "البرامج",
+    arrow: true,
+    dropDownLinks: [
+      {
+        name: "تطبيقات الفاتورة الالكترونية",
+        subText: "",
+        params: programmsContent.EInvoice,
+        route: "/program",
+      },
+      {
+        name: "تطبيقات الايصال الالكترونى",
+        subText: "",
+        params: programmsContent.EReceipt,
+        route: "/program",
+      },
+      {
+        name: "برنامج محاسبات ERP",
+        subText: "",
+        params: programmsContent.ERP,
+        route: "/program",
+      },
+      {
+        name: "mini ERP",
+        subText: "",
+        params: programmsContent.miniERP,
+        route: "/program",
+      },
+
+      {
+        name: "pay Roll",
+        subText: "",
+        params: programmsContent.payRoll,
+        route: "/program",
+      },
+    ],
+  },
+  {
+    name: "الخدمات",
+    arrow: false,
+    route: "/services",
+  },
+  {
+    name: "الرئيسية",
+    arrow: false,
+    route: "/",
+  },
 ];
 
 function NavBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -69,20 +110,31 @@ function NavBar(props) {
     },
   });
 
+  function handleDropDownLinks(params, route) {
+    navigate(route, {
+      state: {
+        content: params,
+      },
+    });
+  }
+
+  // console.log(show);
+
   const drawer = (
     <ThemeProvider theme={theme}>
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <Typography variant="h6" sx={{ my: 2 }}>
-         
-            <img alt="fff" src={logo} className="logo" />
-          
+          <img alt="fff" src={logo} className="logo" />
         </Typography>
         <Divider />
         <List>
-          {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
+          {navItems.map((item, i) => (
+            <ListItem key={i} disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item} />
+                <ListItemText
+                  primary={item.name}
+                  sx={{ fontFamily: "Hamdy v1" }}
+                />
               </ListItemButton>
             </ListItem>
           ))}
@@ -98,7 +150,7 @@ function NavBar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ background: "white" }} className="appBar">
-        <Toolbar sx={{ paddingRight: "60px" }}>
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -116,13 +168,45 @@ function NavBar(props) {
             <img alt="fff" src={logo} className="logo" />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "inline-flex", gap: "1vw" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{ color: "black", fontSize: "2rem", fontWeight: "bold" }}
-              >
-                {item}
-              </Button>
+            {navItems.map((item, i) => (
+              <div className="nav-bar_text">
+                <Button
+                  key={i}
+                  sx={{
+                    color: "black",
+                    fontSize: "2rem",
+                    fontWeight: "bold",
+                    "&:hover": {
+                      color: "#e83e8c",
+                      background: "none",
+                    },
+                    fontFamily: "Hayah",
+                  }}
+                  className="nav-bar__button"
+                  href={item.href}
+                  onClick={() => {
+                    navigate(item.route);
+                  }}
+                >
+                  {item.name}
+                </Button>
+                {item.arrow ? <i className="arrow down"></i> : null}
+                {item.arrow ? (
+                  <div class="dropdown-content">
+                    {item.dropDownLinks.map((i) => (
+                      <div
+                        className="dropdown-content__content"
+                        onClick={() => handleDropDownLinks(i.params, i.route)}
+                      >
+                        <div>{i.name}</div>
+                        <div className="dropdown-content__sub-text">
+                          {i.subText}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             ))}
           </Box>
         </Toolbar>

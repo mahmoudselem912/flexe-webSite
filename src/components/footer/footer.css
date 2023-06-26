@@ -1,6 +1,6 @@
 .footer {
   background-color: #0a2d43;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   padding: 100px;
   direction: rtl;
   color: white;
@@ -37,13 +37,20 @@
 } */
 
 .footer__content {
+  /* display: flex; */
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.whiteIcon{
+  width: 100%;
+}
+
 .address__header {
-  font-size: 20px;
+  font-size: 2.5rem;
   font-weight: bold;
+  font-family: Hayah;
 }
 
 .addresses_container {
@@ -52,32 +59,52 @@
 }
 
 .address {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: inline-flex;
   gap: 5px;
+  font-size: 1.7rem;
+  font-family: Hayah;
 }
 
 .contacts {
-  margin-top: 40px;
-  display: inline-flex;
-  gap: 50px;
+  margin-top: 3rem;
+  display: flex;
+  gap: 2vw;
 }
 
 .phone {
   margin-top: 20px;
   display: inline-flex;
-  gap: 5px;
+  gap: 1vw;
+  font-size: 1.5rem;
 }
 
 .phone_number {
   margin-top: -5px;
+  font-size: 2rem;
+  font-family: Hayah;
 }
 
 .icons-container {
-  position: absolute;
-  bottom: 0;
-  left: 40%;
+  /* position: absolute;
+  bottom: 0; */
+  /* left: 40%; */
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 1vw;
+  justify-content: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.bottom-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 2rem;
 }
 
 .icon-container{
@@ -89,6 +116,56 @@
   transform: translateY(-10px);
 }
 
-.icons-container .icon-container:not(:first-child){
+.copyRight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.coyRight-text{
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+}
+
+/* .icons-container .icon-container:not(:first-child){
   margin-right: 30px;
+} */
+
+@media only screen and (max-width: 75em) {
+  .footer__content {
+    /* display: flex; */
+  
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+
+  .requestDemo-section{
+    margin-top: 3rem;
+  }
+
+  .addresses_container{
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__content {
+    /* display: flex; */
+  
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+
+  .requestDemo-section{
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  
+  .addresses_container{
+    justify-content: center;
+  }
 }

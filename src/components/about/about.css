@@ -3,13 +3,13 @@
   text-align: center;
   /* z-index: 20; */
   position: relative;
+  font-family: "cairo" 
   /* padding-top: 100px;   */
   /* margin-top: -103px; */
 }
 
 
 .about-section__card__container{
-
   padding: 30px 15px;
 }
 
@@ -21,7 +21,6 @@
   background-position: center top;
   text-align: right;
   padding: 20px; 
-  padding: 20px ; 
   /* margin-left: 65px; */
   border-radius: 30px;
 }
@@ -97,13 +96,14 @@
 }
 
 .about-section_card__text1 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .about-section_card__text2 {
-  font-size: 35px;
+  font-size: 2rem;
   color: #29698d;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .about-section_card__button{
@@ -115,6 +115,7 @@
     font-family: 'Cairo';
     color: white;
     padding: 5px;
+
 }
 
 /* .carousel-container{

@@ -7,31 +7,27 @@
 .ourPrograms-section__content{
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
+}
+
+.ourPrograms-section__content > div {
+    width: 40%;
+    height: 60vh;
 }
 
 .lapTop-icon{
-    width: 800px;
-    height: 800px;
+    width: 100%;
 }
 
 .lapTop_content{
-    position: absolute;
-    top: 122px;
-    left: 98px;
-    width: 604px;
-    height: 380px;
-    top: 126px;
-    left: 130px;
-    width: 540px;
-    height: 343px;
-    animation: fromLeft 1s;
+    /* animation: fromLeft 1s; */
+    border-radius: 5px;
 }
 
-.ourPrograms-section__programs{
+.ourPrograms-section__programs {
     display: flex;
     flex-direction: column;
-    margin-top: 168px;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
@@ -39,23 +35,57 @@
     background: #f1f1f1;
     border-radius: 10px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    font-family: Arabic;
 }
 
 .lapTop-container{
     position: relative;
 }
 
-.ourPrograms-section__header{
-    color: rgb(32, 81, 145);
+.lapTop-container .firstImageCon ,
+.lapTop-container .secondImageCon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.lapTop-container .firstImageCon img {
+    width: 100%;
+    height: 100%;
+}
+.lapTop-container .secondImageCon img {
+    width: 67.7%;
+    height: 44%;
     
+    transform: translateY(-28%);
 }
 
+.ourPrograms-section__header{
+    color: rgb(32, 81, 145);
+    font-size: 4rem;
+    font-family: Hayah;
+}
 
+@media only screen and (max-width: 56.25em) {
+    .ourPrograms-section__content {
+        flex-wrap: wrap;
+    }
+    .ourPrograms-section__content > div {
+        /* width: 100%; */
+        width: 80%;
+        height: 40vh;
+    }
+  }
 
 @keyframes fromLeft {
     0% {

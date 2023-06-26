@@ -1,0 +1,18 @@
+.curved-text {
+  font-size: 3rem;
+  font-family: "Cairo";
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  /* left: 50%; */
+  /* I think this works for centering? */
+  top: calc(50% - 5rem);
+  -webkit-transform: translate(-50%, calc(-50% - 5rem));
+  -ms-transform: translate(-50%, calc(-50% - 5rem));
+  transform: translate(-50%, calc(-50% - 5rem));
+}
+
+.curved-text span {
+  position: absolute;
+}

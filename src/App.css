@@ -2,24 +2,21 @@ html {
   font-size: 62.5%;
 }
 
-
-
 @media only screen and (max-width: 75em) {
   html {
-      font-size: 56.25%
+    font-size: 56.25%;
   }
 }
 
 @media only screen and (max-width: 56.25em) {
   html {
-      font-size: 50%;
-      
+    font-size: 50%;
   }
 }
 
 @media only screen and (min-width: 112.5em) {
   html {
-      font-size: 75%
+    font-size: 75%;
   }
 }
 
@@ -62,6 +59,36 @@ html {
   }
 }
 
-body{
-  font-family: 'cairo';
+@font-face {
+  font-family:Hayah;
+  src: url('./fonts/Hayah.otf');
 }
+
+@font-face {
+  font-family:dastnevis;
+  src: url('./fonts/dastnevis.otf');
+}
+
+@font-face {
+  font-family: Hamdy-v1;
+  src: url('./fonts/Hamdy-v1-Bold.ttf');
+}
+
+@font-face {
+  font-family: shekari;
+  src: url('./fonts/shekari.ttf');
+}
+
+@font-face {
+  font-family: nice;
+  src: url('./fonts/FS_Nice.ttf');
+}
+
+@font-face {
+  font-family: Arabic;
+  src: url('./fonts/4_3D.ttf');
+}
+
+
+
+
