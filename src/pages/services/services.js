@@ -51,7 +51,12 @@ const Services = () => {
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only"></p>
+                  <p className="card__price-only">
+                    إذا كنت بحاجة إلى خدمات تصميم تطبيقات سطح المكتب، فأنت على
+                    الطريق الصحيح. يمكنني أن أوفر لك خبرة مهنية في هذا المجال.
+                    سواء كنت تبحث عن تصميم تطبيق سطح المكتب لأعمالك التجارية أو
+                    لغرض شخصي، يمكنني تلبية احتياجاتك بدقة وكفاءة
+                  </p>
                   {/* <p className="card__price-value">$297</p> */}
                 </div>
                 <a href="#footer" className="btn btn--white">
